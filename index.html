@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Company</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="empty.html">Categories</a>
+      <a href="empty.html">About</a>
+      <a href="empty.html">Contact</a>
+    </nav>
+  </header>
+ 
+  <main>
+    <form id="appointmentForm" onsubmit="return validateForm()">
+      <h2>EDUCATION APPOINTMENT FORM</h2>
+      <input type="text" placeholder="Title" title="Title" required>
+      <input type="text" placeholder="Your Name" title="Name" required>
+      <input type="email" id="email" placeholder="Email" title="Email" required>
+      <input type="tel" id="phoneNumber" placeholder="Phone Number(ex:5554443322)" title="PhoneNumber" required>
+      
+      <select name="courseType" id="courseType" required>
+        <option value="" disabled selected hidden>Course Type</option>
+      </select>
+  
+      <select name="city" id="city" required>
+        <option value="" disabled selected hidden>City</option>
+      </select>
+
+      <h1 class="locationLabel" for="locationPreference">How would you like to be located?</h1>
+      <select name="locationPreference" required>
+        <option value="" disabled selected hidden>Select an option</option>
+        <option value="phone">By Phone</option>
+        <option value="email">By Email</option>
+      </select>
+
+      <select name="timeSlot" required>
+        <option value="" disabled selected hidden>Select a time slot</option>
+        <option value="morning">Hours: 8am - 10am</option>
+        <option value="morning">Hours: 10am - 12pm</option>
+        <option value="morning">Hours: 12pm - 2pm</option>
+        <option value="morning">Hours: 2pm - 4pm</option>
+        <option value="morning">Hours: 4pm - 6pm</option>
+        <option value="morning">Hours: 6pm - 8pm</option>
+      </select>
+  
+      <div class="checkbox-group">
+        <input type="checkbox" id="termsCheckbox" required>
+        <label for="termsCheckbox">I agree to the Terms and Conditions</label>
+      </div>
+      
+      <button type="submit">Request Appointment</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
